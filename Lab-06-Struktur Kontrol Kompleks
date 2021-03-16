@@ -1,0 +1,81 @@
+# Zhivaldo Fabio H.
+# 71200608
+
+'''
+Pada suatu hari Cindy ingin mengerjakan kuis pada perlombaan olimpiade matematika. 
+Cindy pun mencari cara agar dapat mengerjakan soal matematika tersebut dengan mudah. 
+Cindy membuat sebuah program untuk mempermudah menghitung jawaban.
+Bantu Cindy untuk membuat Kalkulator untuk menjawab soal kelas 1 SD Cindy.
+'''
+"""""""""
+Input : Pilihan / Choices (integer), angka yg ingin dihitung (float)
+
+Process : Memilih dan menentukan kalkulasi, memasukan angka kedalam fungsi, menghitung angka yg dimasukan, dikeluarkan beserta keterangannya
+
+Output : Pilihan menu / Choices, Angka yg dimasukan, Hasil kalkulasi. Bila di "Enter" Mengulang dari awal.
+"""""""""
+
+import math
+
+def add (x, y):
+    return x + y
+def substract (x, y):
+    return x - y
+def multiply (x, y):
+    return x * y
+def divide (x, y):
+    return x / y
+
+while True:
+    print("Select Calculation :")
+    print("1. Add")
+    print("2. Substract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+    print()
+    print("Enter Choices (1/2/3/4/5)")
+    
+    choice = input(">>> ")
+
+    if choice in ('1', '2', '3', '4'):
+        print("Enter first number :")
+        n1 = float(input(">>> "))
+        print()
+        print("Enter second number :")
+        n2 = float(input(">>> "))
+        print()
+
+        if choice == '1':
+            print(n1, "+", n2, "=", add(n1, n2))
+            print("SMARTER EVERYDAY!")
+            input()
+            print()
+
+        elif choice == '2':
+            print(n1, "-", n2, "=", substract(n1, n2))
+            input()
+            print()
+        
+        elif choice == '3':
+            print(n1, "x", n2, "=", multiply(n1, n2))
+            input()
+            print()
+
+        elif choice == '4':
+            print(n1, ":", n2, "=", divide(n1, n2))
+            input()
+            print()
+
+        else:
+            print("Invalid Input!")
+            input()
+            print()
+
+    elif choice == '5':
+        exit()
+
+    else:
+        print("Invalid Input!")
+        input()
+        print()
